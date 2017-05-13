@@ -1,0 +1,33 @@
+{
+    "name": "adelmazza/slim-framework",
+    "description": "Slim 3 based framework",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "slim3",
+        "framework",
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "Angelo Del Mazza",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.8",
+        "slim/twig-view": "^2.2",
+        "tracy/tracy": "^2.4",
+        "nesbot/carbon": "^1.22",
+        "monolog/monolog": "^1.22",
+        "illuminate/database": "^5.4",
+        "slim/flash": "^0.2.0",
+        "vlucas/valitron": "^1.4",
+        "swiftmailer/swiftmailer": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{% extends 'layout/layout.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+            {% if( errors ) %}
+                <div class="alert alert-danger" role="alert">
+                    Attenzione: la form contiene errori
+                </div>
+            {% endif %}
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Add User</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="post" action="{{ path_for('adduser') }}">
+
+                        <div class="form-group{{ errors.UserFirstName ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">First Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="UserFirstName" value="{{ old.UserFirstName }}">
+                                {% if errors.UserFirstName %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.UserFirstName | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ errors.UserLastName ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Last Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="UserLastName" value="{{ old.UserLastName }}">
+                                {% if errors.UserLastName %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.UserLastName | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ errors.UserEmail ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Email</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="UserEmail" value="{{ old.UserEmail }}">
+                                {% if errors.UserEmail %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.UserEmail | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ errors.UserPassword ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="UserPassword">
+                                {% if errors.UserPassword %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.UserPassword | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ errors.UserPasswordConfirm ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Verify Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="UserPasswordConfirm">
+                                {% if errors.UserPasswordConfirm %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.UserPasswordConfirm | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-btn fa-user"></i>Salva
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

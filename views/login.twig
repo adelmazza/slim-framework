@@ -1,0 +1,56 @@
+{% extends 'layout/layout.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+            {% if( errors ) %}
+                <div class="alert alert-danger" role="alert">
+                    Attenzione: errore...
+                </div>
+            {% endif %}
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="post" action="{{ path_for('login') }}">
+
+                        <div class="form-group{{ errors.LoginEmail ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Email</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="LoginEmail" value="{{ old.LoginEmail }}">
+                                {% if errors.LoginEmail %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.LoginEmail | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ errors.LoginPassword ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Password</label>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="LoginPassword">
+                                {% if errors.LoginPassword %}
+                                    <span class="help-block">
+                                    <strong>{{ errors.LoginPassword | first }}</strong>
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

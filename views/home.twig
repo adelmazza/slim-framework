@@ -1,0 +1,24 @@
+{% extends 'layout/layout.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Home</div>
+                <div class="panel-body">
+
+                    {% if auth.check %}
+                        <p>Welcome {{ auth.user.UserFirstName }} !</p>
+                    {% else %}
+                        <p>Welcome! Please, <a href="{{ path_for('login') }}">login</a></p>
+                    {%  endif %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

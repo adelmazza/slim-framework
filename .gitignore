@@ -1,0 +1,4 @@
+temp/cache/*
+temp/log/*
+temp/sessions/*
+.idea
