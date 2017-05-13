@@ -1,6 +1,6 @@
 # slim-framework
 
-Skeleton based on  Slim 3 andthe following libraries
+Skeleton based on  Slim 3 and the following libraries
 
 - slim/twig-view
 - slim/flash
