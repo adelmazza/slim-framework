@@ -1,8 +1,7 @@
 # slim-framework
 
-Skeleton based ion the following libraries
+Skeleton based on  Slim 3 andthe following libraries
 
-- slim
 - slim/twig-view
 - slim/flash
 - tracy
