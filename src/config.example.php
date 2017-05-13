@@ -11,7 +11,7 @@ return [
 
         'db' => [
             'driver' => 'mysql',
-            'host' => 'localhost:8889',
+            'host' => 'localhost',
             'database' => 'databasename',
             'username' => 'root',
             'password' => 'root',
