@@ -2,3 +2,4 @@ temp/cache/*
 temp/log/*
 temp/sessions/*
 .idea
+src/config.php
