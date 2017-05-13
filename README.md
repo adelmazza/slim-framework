@@ -11,6 +11,8 @@ Skeleton based on  Slim 3 and the following libraries
 - vlucas/valitron
 - swiftmailer
 
+**Rename the configuration file:** *src/config.example.php* to *src/config.php* 
+
 ## Users table
 
 The example model provided is based on the following MySQL table structure:
