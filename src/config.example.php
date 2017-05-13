@@ -12,9 +12,9 @@ return [
         'db' => [
             'driver' => 'mysql',
             'host' => 'localhost',
-            'database' => 'databasename',
-            'username' => 'root',
-            'password' => 'root',
+            'database' => 'dbname',
+            'username' => 'dbuser',
+            'password' => 'dbpass',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
