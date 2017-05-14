@@ -1,6 +1,6 @@
+.idea
+composer.lock
 temp/cache/*
 temp/log/*
 temp/sessions/*
-.idea
 src/config.php
-composer.lock
