@@ -2,14 +2,14 @@
 
 Skeleton based on  Slim 3 and the following libraries
 
-- slim/twig-view
-- slim/flash
-- tracy
-- nesbot/carbon
-- monolog
-- illuminate/database
-- vlucas/valitron
-- swiftmailer
+- [slim/twig-view](https://github.com/slimphp/Twig-View)
+- [slim/flash](https://github.com/slimphp/Slim-Flash)
+- [nette/tracy](https://github.com/nette/tracy)
+- [nesbot/carbon](https://github.com/briannesbitt/Carbon)
+- [monolog/monolog](https://github.com/Seldaek/monolog)
+- [illuminate/database](https://github.com/illuminate/database)
+- [vlucas/valitron](https://github.com/vlucas/valitron)
+- [swiftmailer/swiftmailer](https://github.com/swiftmailer/swiftmailer)
 
 **Rename the configuration file:** *src/config.example.php* to *src/config.php* 
 
